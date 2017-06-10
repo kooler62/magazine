@@ -1,0 +1,19 @@
+AppBundle\Entity\Post:
+  post_{1..10}:
+    text: <text(20)>
+
+AppBundle\Entity\Cat:
+  cat_{1..10}:
+    name: <username()>
+
+AppBundle\Entity\Tag:
+  tag_{1..10}:
+    name: <username()>
+
+AppBundle\Entity\Comment:
+  comment_{1..10}:
+    text: <text(30)>
+
+AppBundle\Entity\User:
+  user_{1..10}:
+     name: <username()>
