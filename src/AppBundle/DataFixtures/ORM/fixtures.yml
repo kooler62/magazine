@@ -1,6 +1,8 @@
 AppBundle\Entity\Post:
   post_{1..10}:
-    text: <text(20)>
+    title: <text(20)>
+    description: <text(150)>
+    text: <text(500)>
 
 AppBundle\Entity\Cat:
   cat_{1..10}:

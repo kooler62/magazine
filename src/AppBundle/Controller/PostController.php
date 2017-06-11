@@ -14,13 +14,34 @@ class PostController extends Controller
      */
     public function indexAction(Request $request)
     {
-       //dump('444');
         $em=$this->getDoctrine()->getManager();
-        $posts=$em->getRepository('AppBundle:Post')
-            ->findAll();
-       // dump($posts);
-       // $posts='5';
-        return $this->render('homepage.html.twig',['posts'=>$posts]);
+        $cats=$em->getRepository('AppBundle:Cat')->findAll();
+
+        $em=$this->getDoctrine()->getManager();
+        $posts=$em->getRepository('AppBundle:Post')->findAll();
+
+        return $this->render('homepage.html.twig',[
+            'cats'=>$cats,
+            'posts'=>$posts]);
      //   return $this->render('homepage');
+    }
+
+    /**
+     * @Route("/p/{id}", name="shortpost")
+     */
+    public function postsAction($id,Request $request)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $cats=$em->getRepository('AppBundle:Cat')->findAll();
+
+        $em=$this->getDoctrine()->getManager();
+        $post=$em->getRepository('AppBundle:Post')->find($id);
+            //->findOneBy('id'=>$id);
+dump($post);
+        return $this->render('post.html.twig',[
+            'cats'=>$cats,
+            'post'=>$post
+        ]);
+        //   return $this->render('homepage');
     }
 }
