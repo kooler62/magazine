@@ -28,7 +28,7 @@ class CatController extends Controller
        // вытаскиваем посты этой категории
         $em3 = $this->getDoctrine()->getManager();
         $posts=$em3->getRepository('AppBundle:Post')->findBy(['cat' => $cats_one]);
-        
+
         return $this->render('homepage.html.twig',[
             'cats'=>$cats,
             'posts'=>$posts

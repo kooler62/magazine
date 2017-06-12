@@ -14,17 +14,12 @@
 {% endfor %}
 <hr>
 
+{% for user in users %}
+    <a href="/users/{{ user.id }}">{{ user.name }}</a><br>
 
-    <h1>{{ post.title }}</h1>
-    id: {{ post.id }}<br>
-    <img src="{{ post.img }}" alt="">
-    категория: <a href="/cats/{{ post.cat.slug }}">{{ post.cat.name }}</a><br>
-    пользователь: <a href="/users/{{ post.user.id }}">{{ post.user.name }}</a><br>
-просмотров:{{ post.views }}<br>
-дата:<br>
-<p>
-    {{ post.text|raw }}
-</p>
+
+{% endfor %}
+
 
 
 </body>
