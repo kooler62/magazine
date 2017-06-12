@@ -16,7 +16,7 @@ class Cat
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
-    public $id;
+    private $id;
 
     /**
      * @return mixed

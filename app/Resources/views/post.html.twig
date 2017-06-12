@@ -20,6 +20,8 @@
     <img src="{{ post.img }}" alt="">
     категория: <a href="/cats/{{ post.cat.slug }}">{{ post.cat.name }}</a><br>
     пользователь: <a href="/user/{{ post.user.id }}">{{ post.user.name }}</a><br>
+просмотров:{{ post.views }}<br>
+дата:<br>
 <p>
     {{ post.text|raw }}
 </p>

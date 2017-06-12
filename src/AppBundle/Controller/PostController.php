@@ -37,7 +37,7 @@ class PostController extends Controller
         $em=$this->getDoctrine()->getManager();
         $post=$em->getRepository('AppBundle:Post')->find($id);
             //->findOneBy('id'=>$id);
-dump($post);
+//dump($post);
         return $this->render('post.html.twig',[
             'cats'=>$cats,
             'post'=>$post

@@ -194,7 +194,7 @@ class Post
     /**
      * @ORM\ManyToOne(targetEntity="Cat")
      */
-    private $cat;
+    public $cat;
 
     /**
      * @return mixed
