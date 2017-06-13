@@ -94,7 +94,7 @@ class Post
         $this->description = $description;
     }
     /**
-     * @ORM\Column(type="string",options={ "default":0})
+     * @ORM\Column(type="integer",options={ "default":0})
      */
     private $views;
 
@@ -121,7 +121,7 @@ class Post
     /**
      * @ORM\Column(type="datetime")
      */
-    //private $created_at;
+    private $created_at;
 
     /**
      * @return mixed

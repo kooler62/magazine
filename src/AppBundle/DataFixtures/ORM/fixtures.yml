@@ -1,12 +1,19 @@
 AppBundle\Entity\Post:
-  post_{1..10}:
+  post_{1..50}:
     title: <text(20)>
-    description: <text(150)>
     text: <text(500)>
+    description: <text(150)>
+    slug: <text(20)>
+    views: '<numberBetween(1, 100)>'
+    img: 'https://img2.goodfon.ru/wallpaper/big/7/de/muzhchiny-dzhinsy-kapot.jpg'
+    createdAt: <dateTimeBetween("-5 hours", "now")>
+    cat: "@cat_*"
+    user: "@user_*"
 
 AppBundle\Entity\Cat:
   cat_{1..10}:
     name: <username()>
+    slug: <username()>
 
 AppBundle\Entity\Tag:
   tag_{1..10}:
@@ -18,4 +25,4 @@ AppBundle\Entity\Comment:
 
 AppBundle\Entity\User:
   user_{1..10}:
-     name: <username()>
+     name: <firstName()>
